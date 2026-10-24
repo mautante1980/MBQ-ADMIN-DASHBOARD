@@ -1,117 +1,123 @@
-/* MBQ ADMIN DASHBOARD */
+<!-- MBQ ADMIN DASHBOARD -->
 
-.admin-dashboard {
-  padding: 20px;
-  background: #f4f7fb;
-  color: #1e293b;
-  font-family: Arial, sans-serif;
-}
+<section class="admin-dashboard">
 
-.admin-header {
-  background: #064e3b;
-  color: white;
-  padding: 25px;
-  border-radius: 15px;
-  margin-bottom: 20px;
-}
+  <div class="admin-header">
+    <h2>MBQ Admin Dashboard</h2>
+    <p>MBQ Pickleball Club Management System</p>
+    <p>Welcome, Club Administrator!</p>
+  </div>
 
-.admin-header h2 {
-  margin: 0 0 8px;
-  font-size: 26px;
-}
+  <!-- DASHBOARD STATISTICS -->
 
-.admin-header p {
-  margin: 0;
-  color: #d1fae5;
-}
+  <div class="dashboard-cards">
 
-.dashboard-cards {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(140px, 1fr)
-  );
-  gap: 15px;
-  margin-bottom: 25px;
-}
+    <div class="dashboard-card">
+      <h3>Total Members</h3>
+      <div class="dashboard-number" id="totalMembers">
+        0
+      </div>
+    </div>
 
-.dashboard-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
+    <div class="dashboard-card">
+      <h3>Active Members</h3>
+      <div class="dashboard-number" id="activeMembers">
+        0
+      </div>
+    </div>
 
-.dashboard-card h3 {
-  margin: 0 0 10px;
-  font-size: 14px;
-  color: #64748b;
-}
+    <div class="dashboard-card">
+      <h3>Tournaments</h3>
+      <div class="dashboard-number" id="totalTournaments">
+        0
+      </div>
+    </div>
 
-.dashboard-number {
-  font-size: 30px;
-  font-weight: bold;
-  color: #047857;
-}
+    <div class="dashboard-card">
+      <h3>Matches Played</h3>
+      <div class="dashboard-number" id="totalMatches">
+        0
+      </div>
+    </div>
 
-.dashboard-section {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
-}
+  </div>
 
-.dashboard-section h3 {
-  margin-top: 0;
-  color: #064e3b;
-}
+  <!-- QUICK ACTIONS -->
 
-.dashboard-table {
-  width: 100%;
-  border-collapse: collapse;
-}
+  <div class="dashboard-section">
 
-.dashboard-table th,
-.dashboard-table td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #e2e8f0;
-}
+    <h3>Management Menu</h3>
 
-.dashboard-table th {
-  background: #ecfdf5;
-  color: #065f46;
-}
+    <button class="dashboard-button"
+      onclick="alert('Member Management coming next!')">
+      Member Management
+    </button>
 
-.dashboard-status {
-  background: #d1fae5;
-  color: #065f46;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-}
+    <button class="dashboard-button"
+      onclick="alert('Tournament Management coming next!')">
+      Tournament Management
+    </button>
 
-.dashboard-button {
-  background: #047857;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin: 5px;
-}
+    <button class="dashboard-button"
+      onclick="alert('Match Management coming next!')">
+      Match Management
+    </button>
 
-.dashboard-button:hover {
-  background: #065f46;
-}
+    <button class="dashboard-button"
+      onclick="alert('Player Rankings coming next!')">
+      Player Rankings
+    </button>
 
-@media (max-width: 600px) {
-  .admin-dashboard {
-    padding: 10px;
-  }
+  </div>
 
-  .dashboard-section {
-    overflow-x: auto;
-  }
-}
+  <!-- RECENT ACTIVITIES -->
+
+  <div class="dashboard-section">
+
+    <h3>Recent Club Activities</h3>
+
+    <table class="dashboard-table">
+
+      <thead>
+        <tr>
+          <th>Activity</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <tr>
+          <td>MBQ Club Registration</td>
+          <td>
+            <span class="dashboard-status">
+              Ready
+            </span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Tournament Management</td>
+          <td>
+            <span class="dashboard-status">
+              Ready
+            </span>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Match Scheduling</td>
+          <td>
+            <span class="dashboard-status">
+              Ready
+            </span>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</section>
